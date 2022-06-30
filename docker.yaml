@@ -1,0 +1,10 @@
+---
+- hosts: agents
+
+become: True
+
+tasks:
+- name: install Docker 
+   yum:
+    name: docker
+   state: present
