@@ -1,10 +1,5 @@
 ---
-- hosts: client
-
-become: True
-
-tasks:
-- name: install Docker 
-   yum:
-    name: docker
-   state: present
+- hosts: docker
+  tasks:
+  - name: Install Docker
+    ansible.builtin.shell: cd ~ && curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
