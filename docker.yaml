@@ -1,5 +1,5 @@
 - name: Configuring Docker
-  hosts: all
+  hosts: client
   tasks:
   - name: Adding Docker repository
     yum_repository:
